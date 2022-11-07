@@ -1,0 +1,9 @@
+name: "bones"
+version: "0.1.0"
+
+authors:
+  - "Dave Chesser <me@dchssr.site>"
+
+crystal: "1.6.0"
+
+license: "GPL-3.0"
