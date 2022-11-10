@@ -1,5 +1,7 @@
 module Bones
   struct Die
+    include Iterator(UInt32)
+
     getter sides : UInt32
     property randomness : Random = Random::DEFAULT
 
@@ -9,8 +11,12 @@ module Bones
       end
     end
 
-    def roll : Int
+    def roll : UInt32
       return @randomness.rand(@sides).succ
+    end
+
+    def next : UInt32
+      return roll
     end
 
     def to_s
